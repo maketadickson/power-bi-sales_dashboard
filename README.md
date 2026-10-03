@@ -52,11 +52,11 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 
 ## Project Files
 
-### Power BI
+### - Power BI
 
 `Retail_Sales & Customer_Analytics.pbix` - Power BI report containing the interactive dashboard, data model, and DAX measures.
 
-### Dashboard Preview
+### - Dashboard Preview
 
 ![Retail Sales & Customer Analytics Dashboard](https://github.com/maketadickson/retail_sales_customer_analytics_dashboard_Power_BI/blob/main/Power%20BI.png)
 
