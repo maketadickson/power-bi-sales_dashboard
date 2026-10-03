@@ -1,5 +1,4 @@
 # Retail Performance Overview with Power BI
-
 ## Overview  
 This project is a Power BI dashboard designed to analyze retail sales and customer data and provide a clear overview of business performance. The dashboard focuses on sales, profitability, customers, products, regions, and sales trends through interactive visualizations and key performance indicators.
 
