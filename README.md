@@ -39,8 +39,6 @@ The dashboard provides an overview of retail sales and customer performance, inc
 - Return Rate
 - Monthly Sales Trends
 
-![Retail Sales & Customer Analytics Dashboard](https://github.com/maketadickson/retail_sales_customer_analytics_dashboard_Power_BI/blob/main/Power%20BI.png)
-
 ## Key Insights
 
 The dashboard was used to identify patterns and trends in revenue, profit, customers, orders, products, regions, and returns as follows:
@@ -52,7 +50,15 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 - Regional analysis reveals differences in sales performance across locations.
 - Monthly sales trends show how revenue changes over time.
 
+## Project Files
+
+### Power BI
+
 `Retail_Sales & Customer_Analytics.pbix` - Power BI report containing the interactive dashboard, data model, and DAX measures.
+
+### Dashboard Preview
+
+![Retail Sales & Customer Analytics Dashboard](https://github.com/maketadickson/retail_sales_customer_analytics_dashboard_Power_BI/blob/main/Power%20BI.png)
 
 ## Conclusion
 
