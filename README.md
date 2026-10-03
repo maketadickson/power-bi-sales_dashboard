@@ -52,7 +52,7 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 - Regional analysis reveals differences in sales performance across locations.
 - Monthly sales trends show how revenue changes over time.
 
-`Retail_Sales & Customer_Analytics.pbix` — Power BI report containing the interactive dashboard, data model, and DAX measures.
+`Retail_Sales & Customer_Analytics.pbix` - Power BI report containing the interactive dashboard, data model, and DAX measures.
 
 ## Conclusion
 
