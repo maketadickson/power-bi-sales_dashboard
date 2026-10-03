@@ -56,16 +56,6 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 
 ## Conclusion
 
-This project demonstrates the use of Power BI, DAX, and data modeling to transform retail sales and customer data into an interactive business intelligence dashboard and communicate meaningful insights from the data.
+This project demonstrates the use of Power BI, DAX, Power Query, and data modeling to transform retail sales and customer data into an interactive business intelligence dashboard and communicate meaningful insights from the data.
 
-## Author - Dickson Maketa
 
-##  Get in touch!
-
-**Name:** Dickson Gaetan Maketa  
-**Email:** makettadickson@gmail.com  
-**Phone:** +255 755 660 020
-
-[GitHub Profile](https://github.com/maketadickson)
-
-Thank you for your support, and I look forward to connecting with you!
