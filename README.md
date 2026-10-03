@@ -25,20 +25,6 @@ The data for this project is sourced from the Kaggle dataset:
 
 - **Dataset Link:** [Retail Dataset](https://www.kaggle.com/datasets/hyerdrac/retail-data)
 
-## Dashboard
-
-The dashboard provides an overview of retail sales and customer performance, including:
-
-- Total Revenue
-- Total Profit
-- Total Customers
-- Total Orders
-- Average Order Value
-- Product Performance
-- Regional Performance
-- Return Rate
-- Monthly Sales Trends
-
 ## Key Insights
 
 The dashboard was used to identify patterns and trends in revenue, profit, customers, orders, products, regions, and returns as follows:
