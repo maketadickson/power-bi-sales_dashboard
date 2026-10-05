@@ -87,7 +87,7 @@ RETURN
                                             )   
 ```
 
-_**Average Order Value**  
+_ **Average Order Value**  
 
 ```dax
  // The function below calculates the average revenue generated per order by dividing Total Revenue by Total Orders.
