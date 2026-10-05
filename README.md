@@ -12,6 +12,12 @@ This project is a Power BI dashboard designed to analyze retail sales and custom
 - Evaluate average order value and return rate.
 - Identify important trends and patterns in sales data.
 
+## Dataset
+
+The data for this project is sourced from the Kaggle dataset:
+
+- **Dataset Link:** [Retail Dataset](https://www.kaggle.com/datasets/hyerdrac/retail-data)
+
 ## Tools & Technologies
 
 - Microsoft Power BI
@@ -19,11 +25,9 @@ This project is a Power BI dashboard designed to analyze retail sales and custom
 - Power BI Data Modeling
 - Power Query
 
-## Dataset
+  ## Dashboard Preview
 
-The data for this project is sourced from the Kaggle dataset:
-
-- **Dataset Link:** [Retail Dataset](https://www.kaggle.com/datasets/hyerdrac/retail-data)
+![Retail Sales & Customer Analytics Dashboard](https://github.com/maketadickson/power-bi-sales_dashboard/blob/main/Dashboard.png)
 
 ## Key Insights
 
@@ -36,15 +40,85 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 - Regional analysis reveals differences in sales performance across locations.
 - Monthly sales trends show how revenue changes over time.
 
-## Project Files
+## Dax Measures
 
- - **Power BI**
+_**Number of customers**     
+// The function below counts the number of unique customers in the customers table.
+```dax
+ DISTINCTCOUNT(customers[customer_id])
+```
 
-`Retail_Sales & Customer_Analytics.pbix` - Power BI report containing the interactive dashboard, data model, and DAX measures.
+- **Total Customers**    
 
- - **Dashboard Preview**
+// The function  below counts the number of distinct customers associated with the orders in the current filter context.
 
-![Retail Sales & Customer Analytics Dashboard](https://github.com/maketadickson/power-bi-sales_dashboard/blob/main/Dashboard.png)
+```dax
+CALCULATE(
+    DISTINCTCOUNT(orders[customer_id]),
+    TREATAS(
+        VALUES(order_details[order_id]),
+        orders[order_id]
+    )
+)
+```
+
+-**Total Orders**   
+
+// The function below counts the total number of unique orders.
+
+```dax
+DISTINCTCOUNT(order_details[order_id])
+```
+
+-**Target Orders**  
+
+// The function below creates an order target based on the previous year's orders. If there is no previous-year value, it returns a default target of 15,000; otherwise, it increases the previous year's orders by 15%.
+
+```dax
+VAR LastYearOrder = 
+                    CALCULATE([Total Orders], SAMEPERIODLASTYEAR(date_table[Date]))
+
+
+RETURN
+            IF(ISBLANK(LastYearOrder), 15000,
+                                            LastYearOrder * 1.5
+                                            )   
+```
+
+_**Average Order Value**  
+
+// The function below calculates the average revenue generated per order by dividing Total Revenue by Total Orders.
+```dax
+ DIVIDE([Total Revenue], [Total Orders])
+```
+
+-**Total Profit**  
+
+// The function below calculates the total profit by summing the profit from all order details.
+```dax
+
+SUM(order_details[profit])
+```
+
+-**Total Revenue**  
+
+// The function below calculates the total revenue by summing the net sales from all order details.
+```dax
+
+ SUM(order_details[net_sale])
+```
+
+-**Return Rate**   
+
+// The function below calculates the return rate by dividing the number of returned orders by the total number of orders.
+```dax
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(order_details),
+        order_details[is_returned] = 1
+    ),
+    COUNTROWS(order_details)
+```
 
 ## Conclusion
 
