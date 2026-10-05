@@ -44,7 +44,7 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 
  - **Dashboard Preview**
 
-![Retail Sales & Customer Analytics Dashboard](Dashboard.png)
+![Retail Sales & Customer Analytics Dashboard](https://github.com/maketadickson/power-bi-sales_dashboard/blob/main/Dashboard.png)
 
 ## Conclusion
 
