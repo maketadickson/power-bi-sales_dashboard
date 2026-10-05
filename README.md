@@ -42,13 +42,14 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 
 ## Dax Measures
 
--**Number of customers**     
+- **Number of customers**      
+
 // The function below counts the number of unique customers in the customers table.
 ```dax
  DISTINCTCOUNT(customers[customer_id])
 ```
 
--**Total Customers**    
+- **Total Customers**    
 
 // The function  below counts the number of distinct customers associated with the orders in the current filter context.
 
@@ -62,7 +63,7 @@ CALCULATE(
 )
 ```
 
--**Total Orders**   
+- **Total Orders**      
 
 // The function below counts the total number of unique orders.
 
@@ -70,7 +71,7 @@ CALCULATE(
 DISTINCTCOUNT(order_details[order_id])
 ```
 
--**Target Orders**  
+- **Target Orders**  
 
 // The function below creates an order target based on the previous year's orders. If there is no previous-year value, it returns a default target of 15,000; otherwise, it increases the previous year's orders by 15%.
 
@@ -85,14 +86,14 @@ RETURN
                                             )   
 ```
 
-_**Average Order Value**  
+_ **Average Order Value**  
 
 // The function below calculates the average revenue generated per order by dividing Total Revenue by Total Orders.
 ```dax
  DIVIDE([Total Revenue], [Total Orders])
 ```
 
--**Total Profit**  
+- **Total Profit**  
 
 // The function below calculates the total profit by summing the profit from all order details.
 ```dax
@@ -100,7 +101,7 @@ _**Average Order Value**
 SUM(order_details[profit])
 ```
 
--**Total Revenue**  
+- **Total Revenue**  
 
 // The function below calculates the total revenue by summing the net sales from all order details.
 ```dax
@@ -108,7 +109,7 @@ SUM(order_details[profit])
  SUM(order_details[net_sale])
 ```
 
--**Return Rate**   
+- **Return Rate**     
 
 // The function below calculates the return rate by dividing the number of returned orders by the total number of orders.
 ```dax
