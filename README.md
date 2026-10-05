@@ -25,7 +25,7 @@ The data for this project is sourced from the Kaggle dataset:
 - Power BI Data Modeling
 - Power Query
 
-  ## Dashboard Preview
+ ## Dashboard Preview
 
 ![Retail Sales & Customer Analytics Dashboard](https://github.com/maketadickson/power-bi-sales_dashboard/blob/main/Dashboard.png)
 
