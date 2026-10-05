@@ -46,6 +46,7 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 
 ```dax
 //The function below counts the number of unique customers in the customers table.
+
  DISTINCTCOUNT(customers[customer_id])
 ```
 
