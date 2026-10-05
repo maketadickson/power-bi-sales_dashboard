@@ -1,4 +1,4 @@
-# Retail Performance Overview with Power BI
+# Retail Sales & Customer Analytics Dashboard with Power BI
 ## Overview  
 This project is a Power BI dashboard designed to analyze retail sales and customer data and provide a clear overview of business performance. The dashboard focuses on sales, profitability, customers, products, regions, and sales trends through interactive visualizations and key performance indicators.
 
@@ -45,7 +45,7 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 - **Number of customers**      
 
 ```dax
-//The function below counts the number of unique customers in the customers table.
+-- The function below counts the number of unique customers in the customers table.
 
  DISTINCTCOUNT(customers[customer_id])
 ```
