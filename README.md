@@ -52,9 +52,9 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 
 - **Total Customers**    
 
- // The function  below counts the number of distinct customers associated with the orders in the current filter context.
-
 ```dax
+// The function  below counts the number of distinct customers associated with the orders in the current filter context.
+
 CALCULATE(
     DISTINCTCOUNT(orders[customer_id]),
     TREATAS(
@@ -66,17 +66,17 @@ CALCULATE(
 
 - **Total Orders**      
 
- // The function below counts the total number of unique orders.
-
 ```dax
+// The function below counts the total number of unique orders.
+
 DISTINCTCOUNT(order_details[order_id])
 ```
 
 - **Target Orders**  
 
- // The function below creates an order target based on the previous year's orders. If there is no previous year value, it returns a default target of 15,000; otherwise, it increases the previous year's orders by 15%.
-
 ```dax
+// The function below creates an order target based on the previous year's orders. If there is no previous year value, it returns a default target of 15,000; otherwise, it increases the previous year's orders by 15%.
+
 VAR LastYearOrder = 
                     CALCULATE([Total Orders], SAMEPERIODLASTYEAR(date_table[Date]))
 
@@ -89,31 +89,33 @@ RETURN
 
 _**Average Order Value**  
 
- // The function below calculates the average revenue generated per order by dividing Total Revenue by Total Orders.
 ```dax
+ // The function below calculates the average revenue generated per order by dividing Total Revenue by Total Orders.
+
  DIVIDE([Total Revenue], [Total Orders])
 ```
 
 - **Total Profit**  
 
- // The function below calculates the total profit by summing the profit from all order details.
 ```dax
+ // The function below calculates the total profit by summing the profit from all order details.
 
 SUM(order_details[profit])
 ```
 
 - **Total Revenue**  
 
- // The function below calculates the total revenue by summing the net sales from all order details.
 ```dax
+ // The function below calculates the total revenue by summing the net sales from all order details.
 
  SUM(order_details[net_sale])
 ```
 
 - **Return Rate**     
 
- // The function below calculates the return rate by dividing the number of returned orders by the total number of orders.
 ```dax
+ // The function below calculates the return rate by dividing the number of returned orders by the total number of orders.
+
 DIVIDE(
     CALCULATE(
         COUNTROWS(order_details),
