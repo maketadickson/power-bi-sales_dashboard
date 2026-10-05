@@ -42,13 +42,13 @@ The dashboard was used to identify patterns and trends in revenue, profit, custo
 
 ## Dax Measures
 
-_**Number of customers**     
+-**Number of customers**     
 // The function below counts the number of unique customers in the customers table.
 ```dax
  DISTINCTCOUNT(customers[customer_id])
 ```
 
-- **Total Customers**    
+-**Total Customers**    
 
 // The function  below counts the number of distinct customers associated with the orders in the current filter context.
 
